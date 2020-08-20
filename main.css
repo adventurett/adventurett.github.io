@@ -1,22 +1,16 @@
 body {
     font-size: 18px;
-    color: #333;
+    background-color: rgb(108, 50, 121);
   }
 p {
     line-height: 1.4em;
 }
 
-/* Style the header */
-.header {
-    grid-area: header;
-    background-color: #f1f1f1;
-    padding: 30px;
-    text-align: center;
-    font-size: 35px;
-  }
-
   /* The grid container */
 .grid-container {
+    max-width: 990px;
+    margin-top: 2em;
+    margin: auto;
     display: grid;
     grid-template-areas: 
       'header header header header header header' 
@@ -25,27 +19,45 @@ p {
     /* grid-column-gap: 10px; - if you want gap between the columns */
   } 
 
+.header {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  grid-area: header;
+  background-color:white;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
 .left,
 .middle {
   padding: 10px;
 }
 
-/* Style the left column */
 .left {
   grid-area: left;
+  background-color: white;
 }
 
-/* Style the middle column */
 .middle {
   grid-area: middle;
 }
 
-/* Style the footer */
+.middle-trips {
+  display: flex;
+}
+
 .footer {
   grid-area: footer;
-  background-color: #f1f1f1;
+  background-color: rgb(75, 75, 75);
   padding: 10px;
-  text-align: center;
+  text-align: left;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.footer-links {
+  display: flex;
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
